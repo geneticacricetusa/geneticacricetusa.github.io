@@ -1,0 +1,57 @@
+<HTML><head><meta http-equiv='Content-Type' content='text/html; charset=windows-1251'><meta http-equiv='Content-Type' content='text/html; charset=windows-1251'><TITLE>Отправка почтового сообщения</TITLE><link rel="STYLESHEET" type="text/css" href="st.css">
+<link rel='STYLESHEET' type='text/css' href='scin/pages.css'>
+<link rel='STYLESHEET' type='text/css' href='scin/teg.css'>
+<link rel='STYLESHEET' type='text/css' href='scin/not-swap-menu-left.css'>
+<link rel='STYLESHEET' type='text/css' href='scin/not-swap-menu-right.css'>
+<link rel='STYLESHEET' type='text/css' href='scin/swap-menu-left.css'>
+<link rel='STYLESHEET' type='text/css' href='scin/swap-menu-right.css'>
+<link rel='STYLESHEET' type='text/css' href='scin/top-menu.css'>
+<link rel='STYLESHEET' type='text/css' href='scin/left-menu.css'>
+<link rel='STYLESHEET' type='text/css' href='scin/right-menu.css'>
+<link rel='STYLESHEET' type='text/css' href='scin/middle-menu.css'>
+<link rel='STYLESHEET' type='text/css' href='scin/bottom-menu.css'>
+</HEAD><body class=text id=text>
+		<script>
+			var wnd = window.dialogArguments;
+			t=wnd.split("::")
+			
+
+			//
+			function mtest(){
+				if (document.forms["orderform"].elements["ФИО"].value=="" || document.forms["orderform"].elements["адрес"].value=="" || document.forms["orderform"].elements["телефон"].value=="" || document.forms["orderform"].elements["e-mail"].value==""){
+	alert("Заполните все поля");
+	return false
+}else{
+return true
+}
+		
+			}
+		</script>
+		<table>
+		<FORM action="/cgi-bin/formmail.pl" method="post" name="myform" id="myform" enct
+ype="application/x-www-form-urlencoded">
+		<script>
+		tt='<INPUT TYPE="hidden" NAME="MAIL:" value="'+t[0]+'"><INPUT TYPE="hidden" NAME="FROM:" value="'+t[1]+'">'
+		document.write(tt)
+		</script>
+	<tr>
+			<td>ФИО</td>
+			<td><input name="ФИО"></td>
+		</tr>	
+		<tr>
+			<td>Ваша эл. почта</td>
+			<td><input name="e-mail"></td>
+		</tr>
+		<tr><td colspan="2">
+		<script>
+				tt='<textarea cols="50" rows="10" name="text">'+t[1]+": "+t[2]+'</textarea>'
+		document.write(tt)
+		</script>
+
+		</td></tr>
+		<tr>
+			<td colspan="2">
+<input type="submit" value="Отправить" class="search_b"></TD></TR></FORM>
+		</table>
+	</body>
+</html>

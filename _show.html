@@ -1,0 +1,52 @@
+<HTML>
+<SCRIPT Language=VBScript>
+
+Function ReplaceX(IniStr, FindStr, TegStart, TegEnd)
+TmpStr = IniStr
+k = InStr(UCase(TmpStr), UCase(FindStr))
+j=0
+Do While k > 0
+if j=1 then TegStart=replace(TegStart,"ID=XX","")
+t1=InStr(k,TmpStr,">")
+t2=InStr(k,TmpStr,"<")
+if (t1>0 and t2=0) or (t1<t2 and t2>0)  then
+	substStr = Mid(TmpStr, k, Len(FindStr))
+else
+	substStr = TegStart & Mid(TmpStr, k, Len(FindStr)) & TegEnd
+end if
+TmpStr = Left(TmpStr, k - 1) & substStr & Mid(TmpStr, k + Len(FindStr))
+k = k + Len(substStr)
+k = InStr(k, UCase(TmpStr), UCase(FindStr))
+j=1
+Loop
+ReplaceX = TmpStr
+End Function
+
+
+SearchStr=location.search
+if len(SearchStr)>0 then
+	 SearchStr=mid(SearchStr,2)
+	 sURL=left(SearchStr,instr(SearchStr,"?")-1)
+	 sFind=mid(SearchStr,instr(SearchStr,"?")+1)
+	 sFind=replace(sFind,"%20"," ")
+end if
+
+Function Window_OnLoad()
+frames.MyFRM.location.href=sURL
+end Function
+
+Function StartChange()
+if instr(frames.MyFRM.location.href,sURL)>0 then
+	sHTML=frames.MyFRM.document.getElementById("text").innerHTML
+	newHTML=ReplaceX(sHTML,sFind,"<SPAN ID=XX style='background:yellow;'>","</SPAN>")
+	frames.MyFRM.document.getElementById("text").innerHTML=newHTML
+	on error resume next
+	frames.MyFRM.document.all.XX.scrollIntoView()
+end if
+end Function
+</SCRIPT>
+
+<FRAMESET border=1>
+<FRAME name=MyFRM src="" onload="StartChange()">
+</FRAMESET>
+</HTML>

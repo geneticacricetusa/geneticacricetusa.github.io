@@ -1,0 +1,203 @@
+/* Fix IE. Hide from IE Mac \*/
+* html *{
+ float: none;
+}
+/* End */
+
+#main{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #FFF;
+	border: 0px solid #fff;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	text-align: left;
+}
+body.main{
+	background-color: #FFF;
+	padding: 10px;
+	text-align: left;
+	
+}
+
+.head{/*класс ячейки, в которой распологается заголовок страницы и верхнее горизонтальное меню*/
+	text-align: left;
+	background-position: right top;
+	background-repeat: repeat-x;
+	background-image: url(scin/head.jpg);
+	background-color: #6197ED;
+	height: 150px;
+	vertical-align: top;
+}
+#zagol{
+	vertical-align:bottom;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+.zagol{
+	text-align: left;
+	width: 100%;
+	padding: 2px;
+	margin: 0;
+	height: 100%;
+	vertical-align: middle;
+}
+.search_b{
+	background-color: #165ECF;
+	color: #fff;
+	font-size: 9pt;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+border: 1px solid #fff;
+padding: 1px;
+margin-top: 3px;
+text-align: center;
+font-weight: bold;
+text-transform: uppercase;
+}
+.search_t{
+	font-size: 9pt;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+#l_search{
+	text-align: center;
+	padding-bottom: 5px;
+}
+#text{
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	font-size: 9pt;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding: 0;
+	vertical-align: top;
+}
+#text_div{
+	height: 99%;
+}
+
+.pagename_div{ 
+	padding: 4px 20px 4px 4px;
+	text-align: right;
+	margin-bottom: 20px;
+	background-color: #165ECF;
+	color: #fff;
+	border: 1px solid #fff;
+font-size: 18pt;
+	background-image: none;
+	}
+.pagename_div p,.pagename_div td{ 
+font-size: 18pt;
+	color: #fff;
+
+	}
+
+.pagename_div *{ 
+font-weight: bold;
+	}
+#link{
+	text-align:right;
+	background-color: #6197ED;
+	padding: 0;
+	padding-right: 12px;
+	margin: 0;
+}
+#link table{
+height: 100%;
+padding: 2px 4px 2px 4px;
+}
+
+#link a{
+	text-decoration: none;
+	padding: 4px;
+	margin: 0;
+	color: #fff;
+	font-size: 10pt;
+}
+#link a:hover{
+	background-color: #165ECF;
+	color: #fff;
+
+}
+/* Fix IE. Hide from IE Mac \*/
+* html #footer{height:10px;}
+* html #footer_text{height:10px;}
+/* End */
+#footer{
+	background-color: #6197ED;
+	color:#fff;
+}
+#footer_text{
+	background-color: #6197ED;
+	color:#fff;
+	margin: 0 10px 0 10px;
+	font-size: 9pt;
+	padding-left: 20px;
+	padding-right: 10px;
+	text-align: right;
+}
+#menu_left{
+	vertical-align: Top;
+	color: White;
+	padding:0;
+	margin: 0;
+	height: 100%;
+	border-right: 1px solid #6197ED;
+	background-color: #6197ED;
+	width: 180px;
+}
+#left_pic{
+	vertical-align: Top;
+	color: White;
+	padding:0;
+	margin: 0;
+		background-position: right top;
+	background-repeat: repeat-x;
+	background-image: url(scin/head.jpg);
+	height: 130px;
+		background-color: #6197ED;
+
+/*	border-bottom: 1px solid #fff;*/
+
+}
+#divMenuBarLeft{
+	height: 100%;
+	width: 180px;
+}
+.hid{visibility: hidden;} 
+#frame_div{
+	width: 100%;
+	height: 100%; 
+	vertical-align: top;
+	max-width: inherit;
+	max-height: inherit;
+	margin-bottom: 20px;
+	overflow: auto;
+}
+
+#our{
+	padding-bottom: 6px;
+	padding-right: 20px;
+	font-size: 9pt;
+	text-align: right;
+	height: 10px;
+	background-color: #6197ED;
+	color:#fff;
+}
+#our *{
+	background-color: #6197ED;
+	color:#fff;
+}
+#anons_1{
+	background-color: #6197ED;
+	vertical-align: top;
+	color:#fff;
+	padding: 3px;
+	height:100%;
+}
