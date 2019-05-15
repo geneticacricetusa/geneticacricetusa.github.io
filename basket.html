@@ -1,11 +1,14 @@
-<HTML><head><meta http-equiv='Content-Type' content='text/html; charset=windows-1251'><meta http-equiv='Content-Type' content='text/html; charset=windows-1251'><TITLE>Корзина заказа</TITLE><link rel='STYLESHEET' type='text/css' href='st.css'></HEAD><body class=text id=text>
+<!DOCTYPE html>
+<HTML><head>
+        <meta charset="utf-8">
+        <TITLE>РљРѕСЂР·РёРЅР° Р·Р°РєР°Р·Р°</TITLE><link rel='STYLESHEET' type='text/css' href='st.css'></HEAD><body class=text id=text>
 		<script>
 			var wnd = window.dialogArguments;
 			var goodslist = wnd.goodslist;
 			//
 			function mtest(){
-				if (document.forms["orderform"].elements["ФИО"].value=="" || document.forms["orderform"].elements["адрес"].value=="" || document.forms["orderform"].elements["телефон"].value=="" || document.forms["orderform"].elements["e-mail"].value==""){
-	alert("Заполните все поля");
+				if (document.forms["orderform"].elements["Р¤РРћ"].value=="" || document.forms["orderform"].elements["Р°РґСЂРµСЃ"].value=="" || document.forms["orderform"].elements["С‚РµР»РµС„РѕРЅ"].value=="" || document.forms["orderform"].elements["e-mail"].value==""){
+	alert("Р—Р°РїРѕР»РЅРёС‚Рµ РІСЃРµ РїРѕР»СЏ");
 	return false
 }else{
 return true
@@ -15,24 +18,24 @@ return true
 		</script>
 		<table>
 		<script>
-		t='<form Action="mailto:'+wnd.mail+'?Subject=Заказ" METHOD="POST" enctype="text/plain" name="orderform" onSubmit="return mtest()">'
+		t='<form Action="mailto:'+wnd.mail+'?Subject=Р—Р°РєР°Р·" METHOD="POST" enctype="text/plain" name="orderform" onSubmit="return mtest()">'
 
 		document.write(t)
 		</script>
 	<tr>
-			<td>ФИО</td>
-			<td><input name="ФИО"></td>
+			<td>Р¤РРћ</td>
+			<td><input name="Р¤РРћ"></td>
 		</tr>	
 		<tr>
-			<td>Ваш почтовый адрес</td>
-			<td><input name="адрес"></td>
+			<td>Р’Р°С€ РїРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ</td>
+			<td><input name="Р°РґСЂРµСЃ"></td>
 		</tr>	
 		<tr>
-			<td>Ваш телефон</td>
-			<td><input name="телефон"></td>
+			<td>Р’Р°С€ С‚РµР»РµС„РѕРЅ</td>
+			<td><input name="С‚РµР»РµС„РѕРЅ"></td>
 		</tr>	
 		<tr>
-			<td>Ваша эл. почта</td>
+			<td>Р’Р°С€Р° СЌР». РїРѕС‡С‚Р°</td>
 			<td><input name="e-mail"></td>
 		</tr>	<tr><td colspan="2"><textarea cols="" rows="" name="zakaz" style="visibility: hidden;"></textarea></td></tr>
 		<tr>
@@ -49,8 +52,8 @@ return true
 						{
 						t+="<tr><td>"
 						tt=""
-							tt=goodslist[i].index + "</td><td><strong>" + goodslist[i].name + "</strong></td><td>" + goodslist[i].qty + " экз. </td><td>по цене " + goodslist[i].price + "р.</td><td> на сумму <strong>" + (goodslist[i].price * goodslist[i].qty)+"р.</strong>";
-							orderstr += " Код:" +goodslist[i].index + ", " + goodslist[i].name +", "+ goodslist[i].qty + " экз., по цене " + goodslist[i].price + " р.; \n";
+							tt=goodslist[i].index + "</td><td><strong>" + goodslist[i].name + "</strong></td><td>" + goodslist[i].qty + " СЌРєР·. </td><td>РїРѕ С†РµРЅРµ " + goodslist[i].price + "СЂ.</td><td> РЅР° СЃСѓРјРјСѓ <strong>" + (goodslist[i].price * goodslist[i].qty)+"СЂ.</strong>";
+							orderstr += " РљРѕРґ:" +goodslist[i].index + ", " + goodslist[i].name +", "+ goodslist[i].qty + " СЌРєР·., РїРѕ С†РµРЅРµ " + goodslist[i].price + " СЂ.; \n";
 							ordersum += goodslist[i].price * goodslist[i].qty;
 							cookval += "poz_" + goodslist[i].index + "_" + goodslist[i].price + "_" + goodslist[i].qty + ",";
 						t+=tt+"</td></tr>"
@@ -62,24 +65,24 @@ return true
 					
 					if (orderstr.length>0)
 					{
-						t += "<br/><div align=right>Общая сумма заказа: <strong>" + ordersum+" р.</strong></div>";
-orderstr+="\n\n Сумма: "+ordersum+" p."
-						printstr = "Список товаров:<br>" + t + "<br/>" + '<br/><input type="submit"  value="отправить заказ"/> <input type="button" onclick="wnd.clearBasket(goodslist); self.close()" value="очистить корзину"/>';
+						t += "<br/><div align=right>РћР±С‰Р°СЏ СЃСѓРјРјР° Р·Р°РєР°Р·Р°: <strong>" + ordersum+" СЂ.</strong></div>";
+orderstr+="\n\n РЎСѓРјРјР°: "+ordersum+" p."
+						printstr = "РЎРїРёСЃРѕРє С‚РѕРІР°СЂРѕРІ:<br>" + t + "<br/>" + '<br/><input type="submit"  value="РѕС‚РїСЂР°РІРёС‚СЊ Р·Р°РєР°Р·"/> <input type="button" onclick="wnd.clearBasket(goodslist); self.close()" value="РѕС‡РёСЃС‚РёС‚СЊ РєРѕСЂР·РёРЅСѓ"/>';
 					}
 					else
-						printstr = "Список ваших товаров пуст<br/>";
+						printstr = "РЎРїРёСЃРѕРє РІР°С€РёС… С‚РѕРІР°СЂРѕРІ РїСѓСЃС‚<br/>";
 				orderform.zakaz.value="\n\n"+orderstr
 						
 					document.write(printstr);
 
 					function addInfo()
 					{
-						return "Ф.И.О. - " + document.orderform.fio.value + ", адрес - " + document.orderform.address.value + ", телефон - " + document.orderform.phone.value + ", почта - " + document.orderform.email.value;
+						return "Р¤.Р.Рћ. - " + document.orderform.fio.value + ", Р°РґСЂРµСЃ - " + document.orderform.address.value + ", С‚РµР»РµС„РѕРЅ - " + document.orderform.phone.value + ", РїРѕС‡С‚Р° - " + document.orderform.email.value;
 					}
 
 				</script>
 							
-				<input type="button" onclick="self.close()" value="вернуться к заказу"/>	</form>
+				<input type="button" onclick="self.close()" value="РІРµСЂРЅСѓС‚СЊСЃСЏ Рє Р·Р°РєР°Р·Сѓ"/>	</form>
 			</td>
 		</tr>
 		</table>

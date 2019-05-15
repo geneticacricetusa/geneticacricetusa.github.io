@@ -220,9 +220,9 @@ if (document.getElementById(name)){
 }
 
 function testtest(){
-	if (document.forms['orderform'].elements['Имя'].value=='')// || document.forms['orderform'].elements['e-mail'].value=='')
+	if (document.forms['orderform'].elements['РРјСЏ'].value=='')// || document.forms['orderform'].elements['e-mail'].value=='')
 	{
-		alert('Укажите ваше имя!');
+		alert('РЈРєР°Р¶РёС‚Рµ РІР°С€Рµ РёРјСЏ!');
 		return false
 	}
 	else{return true}
@@ -232,8 +232,8 @@ function chack_ansver(pr,t,spr){
 l=document.forms['testform'].elements.length-1
 if (l>=1){ 
 vop="1"
-//otv="<br><br><table><tr><td><b>Вопрос 1:</b></td><td> Правильных ответов "
-otv="<br><br><table><tr><td><b>Вопрос 1:</b></td><td> "
+//otv="<br><br><table><tr><td><b>Р’РѕРїСЂРѕСЃ 1:</b></td><td> РџСЂР°РІРёР»СЊРЅС‹С… РѕС‚РІРµС‚РѕРІ "
+otv="<br><br><table><tr><td><b>Р’РѕРїСЂРѕСЃ 1:</b></td><td> "
 otr=0
 ot=0
 prav=""
@@ -244,34 +244,34 @@ for (i=0;i<l;i++){
 	if (vop!=my.id.replace("vop","")){
 		vop=my.id.replace("vop","")
 		if (prav2!=""){prav2+="; "}
-		//otv+=otr +" из "+ ot +"</td><tr><td><b>Вопрос "+vop+":</b></td><td> Правильных ответов "
+		//otv+=otr +" РёР· "+ ot +"</td><tr><td><b>Р’РѕРїСЂРѕСЃ "+vop+":</b></td><td> РџСЂР°РІРёР»СЊРЅС‹С… РѕС‚РІРµС‚РѕРІ "
 		prav1+=(vop-1)+": "
 		prav2+=(vop)+": "
 		if (t==0 || ot==1 || tp=="radio"){
 			if (otr!=ot) {
-				prav1+="Неправильно; "
-				otv+="Неправильно"
+				prav1+="РќРµРїСЂР°РІРёР»СЊРЅРѕ; "
+				otv+="РќРµРїСЂР°РІРёР»СЊРЅРѕ"
 			}
 			else{
 				if (prav!=""){prav+=", "}
 				prav+=vop
-				prav1+="Правильно; "
-				otv+="Правильно"
+				prav1+="РџСЂР°РІРёР»СЊРЅРѕ; "
+				otv+="РџСЂР°РІРёР»СЊРЅРѕ"
 			}
 		}
 		else if (t==1){
-			otv+=otr +" из "+ ot 
+			otv+=otr +" РёР· "+ ot 
 			if (otr!=ot) {
-				prav1+="Неправильно; "
+				prav1+="РќРµРїСЂР°РІРёР»СЊРЅРѕ; "
 			}
 			else{
 				if (prav!=""){prav+=", "}
 				prav+=vop
-				prav1+="Правильно; "
+				prav1+="РџСЂР°РІРёР»СЊРЅРѕ; "
 			}
 		}
 		
-		otv+="</td><tr><td><b>Вопрос "+vop+":</b></td><td>  "
+		otv+="</td><tr><td><b>Р’РѕРїСЂРѕСЃ "+vop+":</b></td><td>  "
 		otr=0
 		ot=0
 	}
@@ -304,25 +304,25 @@ tp=my.type
 	prav1+=(vop)+": "
 if (t==0 || ot==1 || tp=="radio"){
 	if (otr!=ot) {
-		prav1+="Неправильно; "
-		otv+="Неправильно"
+		prav1+="РќРµРїСЂР°РІРёР»СЊРЅРѕ; "
+		otv+="РќРµРїСЂР°РІРёР»СЊРЅРѕ"
 	}
 	else{
 		if (prav!=""){prav+=", "}
 		prav+=vop
-		prav1+="Правильно; "
-		otv+="Правильно"
+		prav1+="РџСЂР°РІРёР»СЊРЅРѕ; "
+		otv+="РџСЂР°РІРёР»СЊРЅРѕ"
 	}
 }
 else if (t==1){
-	otv+=otr +" из "+ ot 
+	otv+=otr +" РёР· "+ ot 
 	if (otr!=ot) {
-		prav1+="Неправильно; "
+		prav1+="РќРµРїСЂР°РІРёР»СЊРЅРѕ; "
 	}
 	else{
 		if (prav!=""){prav+=", "}
 		prav+=vop
-		prav1+="Правильно; "
+		prav1+="РџСЂР°РІРёР»СЊРЅРѕ; "
 	}
 }
 	tp=my.type
@@ -334,18 +334,18 @@ else if (t==1){
 	}
 	else{prav2+=my.value}
 
-	//otv+=otr +" из "+ ot +"</td></tr></table>"
+	//otv+=otr +" РёР· "+ ot +"</td></tr></table>"
 otv+="</td></tr></table>"
 if (pr==1) {document.getElementById("tabans").innerHTML=otv}
 if (document.getElementById("send")){
 	if (spr==0){
 		if (prav!=""){
-			document.getElementById("otv").value="Правильные ответы: "+prav
+			document.getElementById("otv").value="РџСЂР°РІРёР»СЊРЅС‹Рµ РѕС‚РІРµС‚С‹: "+prav
 			document.getElementById("send").style.visibility="visible"
 		}
 	}
 	else if (spr==1){
-			document.getElementById("otv").value="Правильные ответы: "+prav1
+			document.getElementById("otv").value="РџСЂР°РІРёР»СЊРЅС‹Рµ РѕС‚РІРµС‚С‹: "+prav1
 			document.getElementById("send").style.visibility="visible"
 	}
 	else if (spr==2){
@@ -435,7 +435,7 @@ var nodelist2=node.getElementsByTagName("page");
 		}
 	}
 	if (myArr.length>0){printRez(0)}
-	else {document.getElementById("Text").innerHTML="<br><br><center>По запросу <b>"+document.forms["frm_s"].search_t.value+"</b> ничего не найдено!</center>"}
+	else {document.getElementById("Text").innerHTML="<br><br><center>РџРѕ Р·Р°РїСЂРѕСЃСѓ <b>"+document.forms["frm_s"].search_t.value+"</b> РЅРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ!</center>"}
 //printRez(1)
 }
 }
@@ -452,7 +452,7 @@ var nodelist2=node.getElementsByTagName("page");
 		}
 	}
 	if (myArr.length>0){printRez_f(0)}
-	else {top.text.document.getElementById("Text").innerHTML="<br><br><center>По запросу <b>"+document.forms["frm_s"].search_t.value+"</b> ничего не найдено!</center>"}
+	else {top.text.document.getElementById("Text").innerHTML="<br><br><center>РџРѕ Р·Р°РїСЂРѕСЃСѓ <b>"+document.forms["frm_s"].search_t.value+"</b> РЅРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ!</center>"}
 //printRez(1)
 }
 }
@@ -479,7 +479,7 @@ url="<a href='_show.html?"+path+"?"+document.forms["frm_s"].search_t.value+"' ta
 links+="<td>"+url+"</td></tr>"
 }
 links+="</table></center><br>"
-document.getElementById("Text").innerHTML="<br><br><center>Результаты поиска <b>&quot;"+document.forms["frm_s"].search_t.value+"&quot;</b></center><br>"+links
+document.getElementById("Text").innerHTML="<br><br><center>Р РµР·СѓР»СЊС‚Р°С‚С‹ РїРѕРёСЃРєР° <b>&quot;"+document.forms["frm_s"].search_t.value+"&quot;</b></center><br>"+links
 }
 
 function printRez_f(nom){
@@ -494,7 +494,7 @@ url="<a href='_show.html?"+path+"?"+document.forms["frm_s"].search_t.value+"' ta
 links+="<td>"+url+"</td></tr>"
 }
 links+="</table></center><br>"
-top.text.document.getElementById("Text").innerHTML="<br><br><center>Результаты поиска <b>&quot;"+document.forms["frm_s"].search_t.value+"&quot;</b></center><br>"+links
+top.text.document.getElementById("Text").innerHTML="<br><br><center>Р РµР·СѓР»СЊС‚Р°С‚С‹ РїРѕРёСЃРєР° <b>&quot;"+document.forms["frm_s"].search_t.value+"&quot;</b></center><br>"+links
 }
 
 
