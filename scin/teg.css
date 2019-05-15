@@ -1,0 +1,99 @@
+body {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	text-align: center;
+	color: Black;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	background-color: #fff;
+}
+p { font: 11pt; margin: 0px; }
+pre { font-size: 11pt; margin: 0px; padding: 0px;}
+h1{
+	background-color: #165ECF;
+color : #fff;
+background-image: url(h1.gif);
+background-repeat: no-repeat;
+background-position: left;
+font-size: 15pt;
+padding: 2px;
+padding-left: 24px;
+}
+
+#name_div, #name_div td, #name_div p{
+	padding: 5px;
+		color: #fff;
+	font-weight: bold;
+		vertical-align: middle;
+	font-size: 18pt;
+}
+#name_div *{
+	padding: 0;
+	margin: 0;
+}
+
+#text h2{
+color : #165ECF;
+font-size: 14pt;
+background-image: url(h2.gif);
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 20px;
+text-align: left;
+}
+#text h3{
+color : #165ECF;
+font-size: 13pt;
+background-image: url(h3.gif);
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 17px;
+text-align: left;
+}
+#text h4{
+color : #165ECF;
+font-size: 12pt;
+background-image: url(h4.gif);
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 16px;
+text-align: left;
+}
+#text h5{
+color : #4997E1;
+font-size: 11pt;
+background-image: url(h5.gif);
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 16px;
+text-align: left;
+}
+#text h6{
+color : #4997E1;
+font-size: 10pt;
+background-image: url(h6.gif);
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 13px;
+text-align: left;
+}
+
+#text a{
+text-decoration: underline;
+	color: #4997e1;
+}
+
+#text a:hover{
+	color: #4997e1;
+}
+#text ul{
+	list-style-image: url(bullet.gif);
+}
+
+td{
+	font-size: 11pt;
+	}
+li p{
+	padding: 0;
+	margin: 0;
+}

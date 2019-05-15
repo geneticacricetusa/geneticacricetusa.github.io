@@ -1,0 +1,76 @@
+#menu_right{
+	vertical-align: Top;
+	color: White;
+	padding:0;
+	margin: 0 0 0 0;
+	width: 100%;
+}
+#right-menu ul li {
+	position: relative;
+	}
+
+#right-menu li ul {
+	position: absolute;
+	left: -150px;
+	top: 0px;
+	display: none;
+	}
+
+#right-menu li ul ul{
+	position: absolute;
+	left: -150px;
+	top: 0px;
+	display: none;
+	}
+
+#right-menu li ul ul ul{
+	position: absolute;
+	left: -150px;
+	top: 0px;
+	display: none;
+	width:100%;
+	}
+
+#right-menu li: hover ul {
+	display: block;
+	}
+
+#right-menu ul.men_r,ul.men2_r,ul.men3_r,ul.men4_r  {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 150px;
+	border-bottom: 1px solid White;
+	}
+
+div#right-menu li:hover ul ul,
+div#right-menu li li:hover ul ul,
+div#right-menu li li li:hover ul ul,
+div#right-menu li li li li:hover ul ul
+div#right-menu li li li li li:hover ul ul
+{display:none;}
+
+div#right-menu li:hover ul,
+div#right-menu li li:hover ul,
+div#right-menu li li li:hover ul,
+div#right-menu li li li li:hover ul
+div#right-menu li li li li li:hover ul
+{display:block;}
+
+li.m_r a,li.m2_r a,li.m3_r a,li.m_4 a,li.m_r_over a,li.m2_r_over a,li.m3_r_over a,li.m_4_over a  {
+	display: block;
+	text-decoration: none;
+	color: White;
+	background: #4997e1;
+	padding:5px;
+	border: 1px solid White;
+	border-bottom: 0;
+	/*width:100%;*/
+	}
+
+	
+/* Fix IE. Hide from IE Mac \*/
+* html #right-menu ul li { float: left; height: 1%; }
+* html #right-menu ul li a { height: 1%; }
+/* End */
+

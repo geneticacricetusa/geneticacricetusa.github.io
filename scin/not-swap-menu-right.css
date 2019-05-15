@@ -1,0 +1,71 @@
+#menu_right{
+	vertical-align: Top;
+	padding:0;
+	margin: 0 0 0 0;
+	width: 100%;
+}
+#right-notswap-menu ul ul,#right-notswap-menu ul ul ul,#right-notswap-menu li,#right-notswap-menu li li, #right-notswap-menu li li li  {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#right-notswap-menu li li{
+	border-bottom: 1px solid #165ECF;
+}
+#right-notswap-menu li li li{
+	border-bottom: 0px;
+	border-top: 1px solid #165ECF;
+	padding: 1px;
+	margin: 0;
+}
+
+#right-notswap-menu ul{
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1px;
+	padding-bottom: 1px;
+	list-style-type: none;
+	
+}
+#right-notswap-menu .o_free a{
+	padding: 2px;
+	padding-left: 5px;
+	list-style: none;
+	background-color: #165ECF;
+	text-indent: 0px;
+	display: block;
+	text-decoration: none;
+	color: White;
+	font-size: 10pt;
+}
+#right-notswap-menu .o_free2 a{
+	background-color: transparent;	
+	padding:2px;
+		padding-left: 15px;
+	list-style: none;
+	text-indent: 0px;
+	text-decoration: none;
+	text-transform: none;
+	font-size: 11pt;
+	color: Black;
+}
+#right-notswap-menu .o_free2 a:hover{
+	background-color: #F0F6FD;	
+}
+#right-notswap-menu .o_free3 a{
+	background-color: transparent;	
+	padding:2px;
+	padding-left: 35px;
+	list-style: none;
+	text-indent: 0px;
+	text-decoration: none;
+	text-transform: none;
+	font-size: 10pt;
+	color: Black;
+}
+#right-notswap-menu .o_free3 a:hover{
+	background-color: #F0F6FD;	
+}
+#right-notswap-menu #right-current{
+font-weight: bold;
+}

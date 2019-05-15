@@ -1,0 +1,84 @@
+/*универсальная*/
+#text_div{
+	font-size: 11pt;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/**/
+.text{
+	font-size: 11pt;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/*фото*/
+.foto_pic{
+background-color: #DEEBFE;
+border: 1px solid #B1D3F9;
+vertical-align: middle;
+	margin: 2px;
+}
+.foto_gor{
+	margin: 2px;
+}
+.foto_text{
+	padding-left: 15px;
+		font-size: 11pt;
+
+	padding-right: 15px;
+}
+/*новости*/
+#news li{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+.data{
+	color: #4997e1;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.newsname{
+	font-weight: bold;
+}
+/*прайс*/
+/*тесты*/
+
+/*----используется в режиме редактирования-----*/
+
+.col1, .col1_sel, .col1_click,.col2, .col2_sel, .col2_click,.col3, .col3_sel, .col3_click,.col4, .col4_sel, .col4_click{
+
+	background-color: #FFFFAC;
+	height:100%;
+	font-size: 11pt;
+	display: block;
+	cursor: default;
+	color: #000;
+	border: 1px solid #EFC98F;
+}
+.col1_sel,.col4_sel{
+	background-color: #FFF2AC;
+}
+.col2{
+	background-color: #FFF19D;
+}
+.col2_sel{
+	background-color: #FFED86;
+}
+.col3,.col3_sel{
+	background-color: #ECBD77;
+	font-weight: bold;
+}
+.col4{
+	border: 1px dotted;
+}
+.block{
+background-color: #FFFFB0;
+ border: 1px solid #FFE38C;
+}
+.block_select{
+background-color: #FFE38C;	
+ border: 1px solid #FFE38C;
+}
